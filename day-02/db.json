@@ -1,0 +1,17 @@
+{
+  "people": [
+    {
+      "name": "shoiab akhtar ",
+      "age": "26",
+      "city": "islamabad",
+      "id": "00v5ej0cF7s"
+    },
+    {
+      "name": "shoiab akhtar ",
+      "age": "26",
+      "city": "islamabad",
+      "id": "u0oje2iS9CQ"
+    }
+  ],
+  "$schema": "./node_modules/json-server/schema.json"
+}
