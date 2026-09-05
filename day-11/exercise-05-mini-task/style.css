@@ -1,0 +1,37 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 30px;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+}
+
+button {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+#users {
+    display: grid;
+    gap: 15px;
+}
+
+.user-card {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+}
+
+.user-card h3 {
+    margin-top: 0;
+}
+
+.user-card p {
+    margin: 8px 0;
+}
