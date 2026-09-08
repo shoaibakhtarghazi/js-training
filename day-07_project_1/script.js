@@ -1,9 +1,13 @@
+//with localStorage 
 let taskInput = document.getElementById("taskInput");
 let addBtn = document.getElementById("addBtn");
 let taskList = document.getElementById("taskList");
 let emptyMessage = document.getElementById("emptyMessage");
 
-let tasks = [];
+let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+function saveTasks() {
+    localStorage.setItem("tasks", JSON.stringify(tasks));
+}
 
 function showTasks() {
 
@@ -26,9 +30,11 @@ function showTasks() {
         if (task.completed) {
             span.style.textDecoration = "line-through";
         }
+        
 
         span.addEventListener("click", function() {
             task.completed = !task.completed;
+            saveTasks();
             showTasks();
         });
 
@@ -37,6 +43,7 @@ function showTasks() {
 
         deleteBtn.addEventListener("click", function() {
             tasks.splice(index, 1);
+            saveTasks();
             showTasks();
         });
 
@@ -61,6 +68,7 @@ function addTask() {
     };
 
     tasks.push(task);
+    saveTasks();
 
     taskInput.value = "";
 
